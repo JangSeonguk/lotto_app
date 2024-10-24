@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_app/layout.dart';
+import 'package:login_app/lottery_app/lotto.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Layout(),
+      theme: ThemeData(colorSchemeSeed: Colors.blue),
+      home: const Lotto(),
     );
   }
 }
