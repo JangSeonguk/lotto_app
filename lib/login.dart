@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
+import 'package:login_app/lottery_app/layout_lotto.dart';
 import 'package:login_app/lottery_app/lotto.dart';
 import 'package:login_app/widget/my_container.dart';
 import 'package:login_app/widget/my_textfield.dart';
@@ -115,15 +116,12 @@ class _LoginState extends State<Login> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      print("Email: ${emailController.text.trim()}");
-                      print("Password: ${passwordController.text.trim()}");
-
                       if (emailController.text.trim() == 'test' &&
                           passwordController.text.trim() == '123456') {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => const Lotto()));
+                                builder: (context) => const LayoutLotto()));
                       } else if (emailController.text != 'email@email.com' &&
                           passwordController.text == '123456') {
                         ScaffoldMessenger.of(context)

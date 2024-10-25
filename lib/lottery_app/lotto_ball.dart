@@ -7,8 +7,8 @@ class LottoBall extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: 30,
-        height: 30,
+        width: 40,
+        height: 40,
         child: SvgPicture.asset(
           path,
           colorFilter: const ColorFilter.mode(
