@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:login_app/lottery_app/lotto.dart';
 import 'package:login_app/responsive/breakpoint.dart';
@@ -11,6 +12,18 @@ class LayoutLotto extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 83, 125, 198),
       appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(
+              onPressed: () {
+                FirebaseAuth.instance.signOut();
+                Navigator.pop(context);
+              },
+              icon: const Icon(
+                Icons.exit_to_app_sharp,
+                color: Colors.white,
+              ))
+        ],
         centerTitle: true,
         title: const Text(
           "로또 앱",
